@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Crown, Menu, X } from "lucide-react";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 
 export default function Page() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -1076,124 +1078,90 @@ export default function Page() {
           </div>
         )}
       </section>
-
       {/* Footer */}
       <footer className="bg-[#0f172a] text-[#e5e7eb] border-t border-[#1f2937]">
         <div className="max-w-7xl mx-auto px-6 py-12">
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-
             <div>
               <h2 className="text-2xl font-bold text-[#d4af37]">
                 Royal Stay Hotel
               </h2>
-
-              <p className="mt-3 text-sm text-[#9ca3af] leading-6">
-                Luxury comfort, premium hospitality, and unforgettable travel experiences around the world.
+              <p className="mt-3 text-sm text-[#9ca3af]">
+                Luxury comfort, premium hospitality, unforgettable experience.
               </p>
-
               <div className="flex gap-4 mt-5 text-sm">
                 <a className="hover:text-[#d4af37] transition">Facebook</a>
                 <a className="hover:text-[#d4af37] transition">Instagram</a>
                 <a className="hover:text-[#d4af37] transition">Twitter</a>
               </div>
             </div>
-
             <div>
-              <h3 className="text-lg font-semibold mb-4 text-white">
-                Quick Links
-              </h3>
-
+              <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2 text-sm text-[#9ca3af]">
-                {["Home", "Booking", "About", "FAQ", "Contact"].map((item, i) => (
-                  <li key={i}>
-                    <a href="#" className="hover:text-[#d4af37] transition">
-                      {item}
-                    </a>
-                  </li>
-                ))}
+                {["Home", "Rooms", "Booking", "About", "FAQ", "Contact"].map(
+                  (item, i) => (
+                    <li key={i}>
+                      <a className="hover:text-[#d4af37] transition">
+                        {item}
+                      </a>
+                    </li>
+                  )
+                )}
               </ul>
             </div>
-
             <div>
-              <h3 className="text-lg font-semibold mb-4 text-white">
-                Policies
-              </h3>
-
-              <ul className="space-y-2 text-sm text-[#9ca3af]">
-
-                <li>
-                  <Link href="/policies/privacy-policy" className="hover:text-[#d4af37] transition">
-                    Privacy Policy
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/policies/terms" className="hover:text-[#d4af37] transition">
-                    Terms & Conditions
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/policies/booking" className="hover:text-[#d4af37] transition">
-                    Booking Policy
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/policies/cancellation" className="hover:text-[#d4af37] transition">
-                    Cancellation Policy
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/policies/refund-policy" className="hover:text-[#d4af37] transition">
-                    Refund Policy
-                  </Link>
-                </li>
-
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-4 text-white">
-                Contact Info
-              </h3>
-
+              <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
               <div className="space-y-2 text-sm text-[#9ca3af]">
-                <p>📍 Royal Avenue, Luxury City</p>
-                <p>📞 +92 300 1234567</p>
-                <p>📧 info@royalstayhotel.com</p>
-                <p>🕒 24/7 Support Available</p>
+                <p> Royal Avenue, Luxury City</p>
+                <p> +92 300 1234567</p>
+                <p> info@royalstayhotel.com</p>
+                <p> 24/7 Support</p>
               </div>
             </div>
-
+            <div>
+              <h3 className="text-lg font-semibold mb-4">
+                Subscribe to Updates
+              </h3>
+              <form onSubmit={handleSubscribe} className="flex flex-col gap-3">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  className="px-4 py-2 rounded-md bg-[#111827] border border-[#1f2937] text-white focus:outline-none focus:border-[#d4af37]"
+                />
+                <button
+                  type="submit"
+                  className="bg-[#d4af37] cursor-pointer text-black font-semibold py-2 rounded-md hover:bg-yellow-500 transition"             >
+                  Subscribe
+                </button>
+              </form>
+            </div>
           </div>
-
-          {/* Bottom Bar */}
           <div className="border-t border-[#1f2937] my-10"></div>
-
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-[#9ca3af] gap-4">
-
             <p>© 2026 Royal Stay Hotel. All rights reserved.</p>
-
             <div className="flex gap-6">
-              <a href="#privacy" className="hover:text-[#d4af37] transition">
-                Privacy
-              </a>
-
-              <a href="#terms" className="hover:text-[#d4af37] transition">
-                Terms
-              </a>
-
-              <a href="#refund" className="hover:text-[#d4af37] transition">
-                Refund
+              <a className="hover:text-[#d4af37] transition">Privacy Policy</a>
+              <a className="hover:text-[#d4af37] transition">
+                Terms & Conditions
               </a>
             </div>
-
           </div>
-
         </div>
+        <Snackbar
+          open={open}
+          autoHideDuration={3000}
+          onClose={handleClose}
+          anchorOrigin={{ vertical: "bottom", horizontal: "center" }}      >
+          <Alert
+            onClose={handleClose}
+            severity="success"
+            variant="filled"
+            sx={{ width: "100%" }}     >
+            Successfully subscribed to Royal Stay updates!
+          </Alert>
+        </Snackbar>
       </footer>
     </main>
   );

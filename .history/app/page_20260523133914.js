@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Crown, Menu, X } from "lucide-react";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 
 export default function Page() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -1099,6 +1101,7 @@ export default function Page() {
               </div>
             </div>
 
+            {/* Quick Links */}
             <div>
               <h3 className="text-lg font-semibold mb-4 text-white">
                 Quick Links
@@ -1115,6 +1118,7 @@ export default function Page() {
               </ul>
             </div>
 
+            {/* Policies Section */}
             <div>
               <h3 className="text-lg font-semibold mb-4 text-white">
                 Policies

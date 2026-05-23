@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Crown, Menu, X } from "lucide-react";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 
 export default function Page() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -1099,6 +1101,7 @@ export default function Page() {
               </div>
             </div>
 
+            {/* Quick Links */}
             <div>
               <h3 className="text-lg font-semibold mb-4 text-white">
                 Quick Links
@@ -1115,45 +1118,46 @@ export default function Page() {
               </ul>
             </div>
 
-            <div>
-              <h3 className="text-lg font-semibold mb-4 text-white">
-                Policies
-              </h3>
+           {/* Policies Section */}
+<div>
+  <h3 className="text-lg font-semibold mb-4 text-white">
+    Policies
+  </h3>
 
-              <ul className="space-y-2 text-sm text-[#9ca3af]">
+  <ul className="space-y-2 text-sm text-[#9ca3af]">
 
-                <li>
-                  <Link href="/policies/privacy-policy" className="hover:text-[#d4af37] transition">
-                    Privacy Policy
-                  </Link>
-                </li>
+    <li>
+      <Link href="/policies/privacy-policy" className="hover:text-[#d4af37] transition">
+        Privacy Policy
+      </Link>
+    </li>
 
-                <li>
-                  <Link href="/policies/terms" className="hover:text-[#d4af37] transition">
-                    Terms & Conditions
-                  </Link>
-                </li>
+    <li>
+      <Link href="/policies/terms" className="hover:text-[#d4af37] transition">
+        Terms & Conditions
+      </Link>
+    </li>
 
-                <li>
-                  <Link href="/policies/booking" className="hover:text-[#d4af37] transition">
-                    Booking Policy
-                  </Link>
-                </li>
+    <li>
+      <Link href="/policies/booking" className="hover:text-[#d4af37] transition">
+        Booking Policy
+      </Link>
+    </li>
 
-                <li>
-                  <Link href="/policies/cancellation" className="hover:text-[#d4af37] transition">
-                    Cancellation Policy
-                  </Link>
-                </li>
+    <li>
+      <Link href="/policies/cancellation" className="hover:text-[#d4af37] transition">
+        Cancellation Policy
+      </Link>
+    </li>
 
-                <li>
-                  <Link href="/policies/refund-policy" className="hover:text-[#d4af37] transition">
-                    Refund Policy
-                  </Link>
-                </li>
+    <li>
+      <Link href="/policies/refund-policy" className="hover:text-[#d4af37] transition">
+        Refund Policy
+      </Link>
+    </li>
 
-              </ul>
-            </div>
+  </ul>
+</div>
 
             <div>
               <h3 className="text-lg font-semibold mb-4 text-white">

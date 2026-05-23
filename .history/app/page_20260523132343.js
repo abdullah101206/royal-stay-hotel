@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Crown, Menu, X } from "lucide-react";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 
 export default function Page() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -1076,124 +1078,516 @@ export default function Page() {
           </div>
         )}
       </section>
+      <section
+        id="privacy"
+        className="bg-[#f8fafc] py-20 px-6 lg:px-8 scroll-mt-24"
+      >
+        <div className="max-w-5xl mx-auto">
 
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0f172a]">
+              Privacy <span className="text-[#d4af37]">Policy</span>
+            </h2>
+
+            <p className="text-gray-600 mt-3 text-sm md:text-base">
+              Your trust is important to us. This policy explains how we handle your data.
+            </p>
+          </div>
+
+          {/* Content Box */}
+          <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 md:p-10 space-y-8">
+
+            {/* Section 1 */}
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                1. Information We Collect
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                We may collect basic information such as your name, email address,
+                phone number, and booking details when you use our website or services.
+              </p>
+            </div>
+
+            {/* Section 2 */}
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                2. How We Use Your Information
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                Your information is used to process bookings, improve customer service,
+                and provide a personalized travel experience.
+              </p>
+            </div>
+
+            {/* Section 3 */}
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                3. Data Protection
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                We use secure systems and industry-standard practices to protect your
+                personal data from unauthorized access or misuse.
+              </p>
+            </div>
+
+            {/* Section 4 */}
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                4. Third-Party Sharing
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                We do not sell or rent your personal data. Information may only be
+                shared with trusted service providers for booking purposes.
+              </p>
+            </div>
+
+            {/* Section 5 */}
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                5. Your Consent
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                By using our website, you agree to the terms of this Privacy Policy.
+              </p>
+            </div>
+
+          </div>
+
+          {/* Footer Note */}
+          <p className="text-center text-sm text-gray-500 mt-10">
+            Last updated: 2026 | Royal Stay Hotel
+          </p>
+
+        </div>
+      </section>
+      <section
+        id="terms"
+        className="bg-white py-20 px-6 lg:px-8 scroll-mt-24"
+      >
+        <div className="max-w-5xl mx-auto">
+
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0f172a]">
+              Terms & <span className="text-[#d4af37]">Conditions</span>
+            </h2>
+
+            <p className="text-gray-600 mt-3 text-sm md:text-base">
+              Please read these terms carefully before using our services.
+            </p>
+          </div>
+
+          {/* Content Box */}
+          <div className="bg-[#f8fafc] border border-gray-200 rounded-2xl shadow-sm p-6 md:p-10 space-y-8">
+
+            {/* Section 1 */}
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                1. Acceptance of Terms
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                By accessing and using our website, you agree to comply with and be bound by these Terms & Conditions.
+                If you do not agree, please do not use our services.
+              </p>
+            </div>
+
+            {/* Section 2 */}
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                2. Booking & Reservations
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                All bookings are subject to availability. We reserve the right to accept or reject any booking request.
+                Confirmation will be provided via email or contact details provided by the user.
+              </p>
+            </div>
+
+            {/* Section 3 */}
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                3. Payment Policy
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                Full or partial payment may be required at the time of booking.
+                Prices are subject to change without prior notice.
+              </p>
+            </div>
+
+            {/* Section 4 */}
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                4. Cancellation Policy
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                Cancellations must be made within the allowed time frame to qualify for a refund.
+                Late cancellations may incur charges or be non-refundable.
+              </p>
+            </div>
+
+            {/* Section 5 */}
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                5. User Responsibilities
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                Users must provide accurate information during booking.
+                Any misuse of the website or fraudulent activity may result in account restriction.
+              </p>
+            </div>
+
+            {/* Section 6 */}
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                6. Limitation of Liability
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                We are not responsible for delays, service interruptions, or issues caused by third-party providers.
+              </p>
+            </div>
+
+          </div>
+
+          {/* Footer Note */}
+          <p className="text-center text-sm text-gray-500 mt-10">
+            Last updated: 2026 | Royal Stay Hotel
+          </p>
+
+        </div>
+      </section>
+
+      <section
+        id="refund"
+        className="bg-[#f8fafc] py-20 px-6 lg:px-8 scroll-mt-24"
+      >
+        <div className="max-w-5xl mx-auto">
+
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0f172a]">
+              Return & <span className="text-[#d4af37]">Refund Policy</span>
+            </h2>
+
+            <p className="text-gray-600 mt-3 text-sm md:text-base">
+              Please review our refund policy before making any booking or payment.
+            </p>
+          </div>
+
+          {/* Content Box */}
+          <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 md:p-10 space-y-8">
+
+            {/* Section 1 */}
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                1. Booking Cancellation
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                Cancellations must be requested within the allowed time frame before check-in.
+                Late cancellations may not be eligible for a refund.
+              </p>
+            </div>
+
+            {/* Section 2 */}
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                2. Refund Eligibility
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                Refunds are only applicable for eligible bookings as per hotel policy.
+                Some discounted or promotional bookings may be non-refundable.
+              </p>
+            </div>
+
+            {/* Section 3 */}
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                3. Processing Time
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                Approved refunds are processed within 5–10 business days depending on your payment method or bank.
+              </p>
+            </div>
+
+            {/* Section 4 */}
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                4. No-Show Policy
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                If a guest does not show up on the booking date, no refund will be issued.
+              </p>
+            </div>
+
+            {/* Section 5 */}
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                5. Changes to Booking
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                Modifications to booking dates or room type depend on availability and may include additional charges.
+              </p>
+            </div>
+
+            {/* Section 6 */}
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                6. Refund Method
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                Refunds will be issued using the original payment method only.
+              </p>
+            </div>
+
+          </div>
+
+          {/* Footer Note */}
+          <p className="text-center text-sm text-gray-500 mt-10">
+            Last updated: 2026 | Royal Stay Hotel
+          </p>
+
+        </div>
+      </section>
+
+      <section
+        id="booking"
+        className="bg-[#f8fafc] py-20 px-6 lg:px-8 scroll-mt-24"
+      >
+        <div className="max-w-5xl mx-auto">
+
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0f172a]">
+              Booking <span className="text-[#d4af37]">Policy</span>
+            </h2>
+
+            <p className="text-gray-600 mt-3 text-sm md:text-base">
+              Please read our booking terms before confirming your reservation.
+            </p>
+          </div>
+
+          {/* Content Box */}
+          <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 md:p-10 space-y-8">
+
+            {/* Section 1 */}
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                1. Booking Confirmation
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                All bookings are confirmed only after successful payment or approval.
+                You will receive a confirmation email or SMS after booking.
+              </p>
+            </div>
+
+            {/* Section 2 */}
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                2. Availability
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                Room availability is subject to real-time updates. Booking is not guaranteed until confirmed.
+              </p>
+            </div>
+
+            {/* Section 3 */}
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                3. Pricing Policy
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                Prices may change without prior notice depending on season, demand, or promotions.
+              </p>
+            </div>
+
+            {/* Section 4 */}
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                4. User Responsibility
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                Users must provide correct personal and booking details. Incorrect information may lead to cancellation.
+              </p>
+            </div>
+
+            {/* Section 5 */}
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                5. Special Requests
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                Special requests (like room type, view, or amenities) are subject to availability and cannot be guaranteed.
+              </p>
+            </div>
+
+          </div>
+
+          <p className="text-center text-sm text-gray-500 mt-10">
+            Last updated: 2026 | Royal Stay Hotel
+          </p>
+
+        </div>
+      </section>
+
+      <section
+        id="cancellation"
+        className="bg-white py-20 px-6 lg:px-8 scroll-mt-24"
+      >
+        <div className="max-w-5xl mx-auto">
+
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0f172a]">
+              Cancellation <span className="text-[#d4af37]">Policy</span>
+            </h2>
+
+            <p className="text-gray-600 mt-3 text-sm md:text-base">
+              Understand our cancellation rules before making changes to your booking.
+            </p>
+          </div>
+
+          {/* Content Box */}
+          <div className="bg-[#f8fafc] border border-gray-200 rounded-2xl shadow-sm p-6 md:p-10 space-y-8">
+
+            {/* Section 1 */}
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                1. Free Cancellation
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                Free cancellation is available if requested within the allowed time period before check-in.
+              </p>
+            </div>
+
+            {/* Section 2 */}
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                2. Late Cancellation
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                Cancellations made close to the check-in date may result in partial or no refund.
+              </p>
+            </div>
+
+            {/* Section 3 */}
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                3. No Show Policy
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                If a guest does not arrive on the booking date, it will be treated as a no-show and no refund will be issued.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                4. Refund Eligibility
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                Refund eligibility depends on booking type and cancellation timing.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+                5. Modification Instead of Cancellation
+              </h3>
+              <p className="text-gray-600 leading-7 text-sm md:text-base">
+                In some cases, booking modifications are allowed instead of cancellation, subject to availability.
+              </p>
+            </div>
+
+          </div>
+
+          <p className="text-center text-sm text-gray-500 mt-10">
+            Last updated: 2026 | Royal Stay Hotel
+          </p>
+
+        </div>
+      </section>
       {/* Footer */}
       <footer className="bg-[#0f172a] text-[#e5e7eb] border-t border-[#1f2937]">
         <div className="max-w-7xl mx-auto px-6 py-12">
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-
             <div>
               <h2 className="text-2xl font-bold text-[#d4af37]">
                 Royal Stay Hotel
               </h2>
-
-              <p className="mt-3 text-sm text-[#9ca3af] leading-6">
-                Luxury comfort, premium hospitality, and unforgettable travel experiences around the world.
+              <p className="mt-3 text-sm text-[#9ca3af]">
+                Luxury comfort, premium hospitality, unforgettable experience.
               </p>
-
               <div className="flex gap-4 mt-5 text-sm">
                 <a className="hover:text-[#d4af37] transition">Facebook</a>
                 <a className="hover:text-[#d4af37] transition">Instagram</a>
                 <a className="hover:text-[#d4af37] transition">Twitter</a>
               </div>
             </div>
-
             <div>
-              <h3 className="text-lg font-semibold mb-4 text-white">
-                Quick Links
-              </h3>
-
+              <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2 text-sm text-[#9ca3af]">
-                {["Home", "Booking", "About", "FAQ", "Contact"].map((item, i) => (
-                  <li key={i}>
-                    <a href="#" className="hover:text-[#d4af37] transition">
-                      {item}
-                    </a>
-                  </li>
-                ))}
+                {["Home", "Rooms", "Booking", "About", "FAQ", "Contact"].map(
+                  (item, i) => (
+                    <li key={i}>
+                      <a className="hover:text-[#d4af37] transition">
+                        {item}
+                      </a>
+                    </li>
+                  )
+                )}
               </ul>
             </div>
-
             <div>
-              <h3 className="text-lg font-semibold mb-4 text-white">
-                Policies
-              </h3>
-
-              <ul className="space-y-2 text-sm text-[#9ca3af]">
-
-                <li>
-                  <Link href="/policies/privacy-policy" className="hover:text-[#d4af37] transition">
-                    Privacy Policy
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/policies/terms" className="hover:text-[#d4af37] transition">
-                    Terms & Conditions
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/policies/booking" className="hover:text-[#d4af37] transition">
-                    Booking Policy
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/policies/cancellation" className="hover:text-[#d4af37] transition">
-                    Cancellation Policy
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/policies/refund-policy" className="hover:text-[#d4af37] transition">
-                    Refund Policy
-                  </Link>
-                </li>
-
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-4 text-white">
-                Contact Info
-              </h3>
-
+              <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
               <div className="space-y-2 text-sm text-[#9ca3af]">
-                <p>📍 Royal Avenue, Luxury City</p>
-                <p>📞 +92 300 1234567</p>
-                <p>📧 info@royalstayhotel.com</p>
-                <p>🕒 24/7 Support Available</p>
+                <p> Royal Avenue, Luxury City</p>
+                <p> +92 300 1234567</p>
+                <p> info@royalstayhotel.com</p>
+                <p> 24/7 Support</p>
               </div>
             </div>
-
+            <div>
+              <h3 className="text-lg font-semibold mb-4">
+                Subscribe to Updates
+              </h3>
+              <form onSubmit={handleSubscribe} className="flex flex-col gap-3">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  className="px-4 py-2 rounded-md bg-[#111827] border border-[#1f2937] text-white focus:outline-none focus:border-[#d4af37]"
+                />
+                <button
+                  type="submit"
+                  className="bg-[#d4af37] cursor-pointer text-black font-semibold py-2 rounded-md hover:bg-yellow-500 transition"             >
+                  Subscribe
+                </button>
+              </form>
+            </div>
           </div>
-
-          {/* Bottom Bar */}
           <div className="border-t border-[#1f2937] my-10"></div>
-
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-[#9ca3af] gap-4">
-
             <p>© 2026 Royal Stay Hotel. All rights reserved.</p>
-
             <div className="flex gap-6">
-              <a href="#privacy" className="hover:text-[#d4af37] transition">
-                Privacy
-              </a>
-
-              <a href="#terms" className="hover:text-[#d4af37] transition">
-                Terms
-              </a>
-
-              <a href="#refund" className="hover:text-[#d4af37] transition">
-                Refund
+              <a className="hover:text-[#d4af37] transition">Privacy Policy</a>
+              <a className="hover:text-[#d4af37] transition">
+                Terms & Conditions
               </a>
             </div>
-
           </div>
-
         </div>
+        <Snackbar
+          open={open}
+          autoHideDuration={3000}
+          onClose={handleClose}
+          anchorOrigin={{ vertical: "bottom", horizontal: "center" }}      >
+          <Alert
+            onClose={handleClose}
+            severity="success"
+            variant="filled"
+            sx={{ width: "100%" }}     >
+            Successfully subscribed to Royal Stay updates!
+          </Alert>
+        </Snackbar>
       </footer>
     </main>
   );

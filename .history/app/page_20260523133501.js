@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Crown, Menu, X } from "lucide-react";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 
 export default function Page() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -1099,6 +1101,7 @@ export default function Page() {
               </div>
             </div>
 
+            {/* Quick Links */}
             <div>
               <h3 className="text-lg font-semibold mb-4 text-white">
                 Quick Links
@@ -1115,6 +1118,7 @@ export default function Page() {
               </ul>
             </div>
 
+            {/* Policies Section */}
             <div>
               <h3 className="text-lg font-semibold mb-4 text-white">
                 Policies
@@ -1123,38 +1127,39 @@ export default function Page() {
               <ul className="space-y-2 text-sm text-[#9ca3af]">
 
                 <li>
-                  <Link href="/policies/privacy-policy" className="hover:text-[#d4af37] transition">
+                  <a href="/privacy-policy" className="hover:text-[#d4af37] transition">
                     Privacy Policy
-                  </Link>
+                  </a>
                 </li>
 
                 <li>
-                  <Link href="/policies/terms" className="hover:text-[#d4af37] transition">
+                  <a href="/terms-and-conditions" className="hover:text-[#d4af37] transition">
                     Terms & Conditions
-                  </Link>
+                  </a>
                 </li>
 
                 <li>
-                  <Link href="/policies/booking" className="hover:text-[#d4af37] transition">
+                  <a href="/booking-policy" className="hover:text-[#d4af37] transition">
                     Booking Policy
-                  </Link>
+                  </a>
                 </li>
 
                 <li>
-                  <Link href="/policies/cancellation" className="hover:text-[#d4af37] transition">
+                  <a href="/cancellation-policy" className="hover:text-[#d4af37] transition">
                     Cancellation Policy
-                  </Link>
+                  </a>
                 </li>
 
                 <li>
-                  <Link href="/policies/refund-policy" className="hover:text-[#d4af37] transition">
+                  <a href="/refund-policy" className="hover:text-[#d4af37] transition">
                     Refund Policy
-                  </Link>
+                  </a>
                 </li>
 
               </ul>
             </div>
 
+            {/* Contact */}
             <div>
               <h3 className="text-lg font-semibold mb-4 text-white">
                 Contact Info
