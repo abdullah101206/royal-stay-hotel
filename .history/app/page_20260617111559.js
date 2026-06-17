@@ -13,6 +13,8 @@ export default function Page() {
     { name: "Booking", href: "/#booking" },
     { name: "About", href: "/#about" },
     { name: "Contact", href: "/#contact" },
+    { name: "Sign Up", href: "/signup" },
+    { name: "Login", href: "/login" }
   ];
 
   useEffect(() => {
